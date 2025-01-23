@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT9R_Q3_QUIZ1_ALHAZMI_EBTISAM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/012/105/210/non_2x/abstract-technology-futuristic-digital-square-pattern-with-lighting-glowing-particles-square-elements-on-dark-purple-background-free-vector.jpg);
+            font-family: Luminari, fantasy;
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: #E25DF5;
+            background: rgba(226, 93, 245, 0.8); 
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: darkmagenta;
+        }
+        p {
+            color: darkviolet;
+        }
+        button {
+            margin: 10px 0;
+        }
+        .ending{
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get To Know Javascript Operators!</h1>
+        <p></p>
+
+        <div>
+            <h2>Arithmetic Operators</h2>
+            <p>Addition, subtraction, multiplication, and division are shown here:</p>
+            <button class="btn btn-primary" onclick="showArithmetic()">Show Results</button>
+            <div id="arithmeticResult" class="mt-3"></div>
+        </div>
+
+        <div>
+            <h2>Comparison Operators</h2>
+            <p>See how numbers are compared:</p>
+            <button class="btn btn-danger" onclick="showComparison()">Show Results</button>
+            <div id="comparisonResult" class="mt-3"></div>
+        </div>
+
+        <div>
+            <h2>Logical Operators</h2>
+            <p>Logical operations and their results are shown:</p>
+            <button class="btn btn-success" onclick="showLogical()">Show Results</button>
+            <div id="logicalResult" class="mt-3"></div>
+        </div>
+
+        <footer class="mt-5 text-center">
+            <p class="ending">Learn more on <a href="https://www.codecademy.com/catalog/language/javascript" target="_blank">JavaScript here!</a>.</p>
+        </footer>
+    </div>
+
+   <script>
+        function showArithmetic() {
+            let x = 10, y = 15;
+            document.getElementById("arithmeticResult").innerHTML = `
+                <ul>
+                    <li>Addition: ${x + y}</li>
+                    <li>Subtraction: ${x - y}</li>
+                    <li>Multiplication: ${x * y}</li>
+                    <li>Division: ${x / y}</li>
+                </ul>
+            `;
+        }
+
+        function showComparison() {
+            let x = 10, y = 15;
+            document.getElementById("comparisonResult").innerHTML = `
+                <ul>
+                    <li>${x} > ${y}: ${x > y}</li>
+                    <li>${x} < ${y}: ${x < y}</li>
+                    <li>${x} === ${y}: ${x === y}</li>
+                </ul>
+            `;
+        }
+
+        function showLogical() {
+            let a = true, b = false;
+            document.getElementById("logicalResult").innerHTML = `
+                <ul>
+                    <li>true AND false: ${a && b}</li>
+                    <li>true OR false: ${a || b}</li>
+                    <li>NOT true: ${!a}</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
